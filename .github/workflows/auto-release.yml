@@ -1,4 +1,4 @@
-name: Auto Release – WordPress
+name: Auto Release – node
  
 on:
   pull_request:
