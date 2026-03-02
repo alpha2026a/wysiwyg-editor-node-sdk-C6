@@ -89,12 +89,11 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
 
-      - run: npm ci
+      - name: Run NPM Install
+        run: npm install
 
       - name: Publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+        run: npm publish 
 
       - name: Commit & push
         run: |
